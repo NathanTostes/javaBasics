@@ -12,12 +12,8 @@ public class SystemResolution {
         int width = (int)size.getWidth();
         int height = (int)size.getHeight();
         
-        System.out.print("Altura da Tela: ");
-        System.out.print(height );
-        System.out.println(" px");
-        System.out.print("Largura da Tela: ");
-        System.out.print(width);
-        System.out.println(" px");
+        System.out.println("Altura da Tela: " + height + " px");
+        System.out.println("Largura da Tela: " + width + " px");
         
     }
     
