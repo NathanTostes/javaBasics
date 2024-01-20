@@ -6,7 +6,7 @@ public class App {
 
         fighters[1] = new Fighter("PutsScritpt", "Brazilian", 29, 1.68f, 57.8f, 14, 2, 3);
 
-        fighters[2] = new Fighter("SnapShadow", "American", 35, 8.75f, 80.9f,  12, 2, 1);
+        fighters[2] = new Fighter("SnapShadow", "American", 35, 1.75f, 80.9f,  12, 2, 1);
 
         fighters[3] = new Fighter("DeadCode", "Australian", 28, 1.93f, 81.6f,  13, 0, 2);
 

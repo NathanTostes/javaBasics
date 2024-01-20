@@ -58,9 +58,14 @@ public class Fight {
             int win0 = 0;
             int win1 = 0;
             int winCondition = (int) (this.getRounds() % 2 == 0 ? this.getRounds() / 2 + 1 : Math.ceilDiv(this.getRounds(), 2));
+
+            int challengedMastery = (challenged.getWins() - challenged.getLosses()) + Math.round(challenged.getHeight() * 10) + Math.round(challenged.getWeight() * 2 / 10);
+            int challengerMastery = (challenger.getWins() - challenger.getLosses()) + Math.round(challenger.getHeight() * 10) + Math.round(challenger.getWeight() * 2 / 10);
+            System.out.println(challenged.getName() + ": " + challengedMastery);
+            System.out.println(challenger.getName() + ": " + challengerMastery);
             
             for (int i = 1; i <= rounds && win0 != winCondition && win1 != winCondition; i++) {
-                if (random.nextInt(2) == 1) {
+                if (random.nextInt(challengedMastery + challengerMastery) < challengedMastery) {
                     roundWinner = challenged.getName();
                     ++win1;
                 } else {
