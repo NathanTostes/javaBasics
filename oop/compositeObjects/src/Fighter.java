@@ -1,4 +1,4 @@
-public class Fighter implements FighterInterface{
+public class Fighter {
     private String name;
     private String nacionality;
     private int age;
@@ -21,75 +21,76 @@ public class Fighter implements FighterInterface{
         this.setDraws(newDraws);
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    private String getNacionality() {
+    public String getNacionality() {
         return nacionality;
     }
-    private void setNacionality(String nacionality) {
+    public void setNacionality(String nacionality) {
         this.nacionality = nacionality;
     }
-    private int getAge() {
+    public int getAge() {
         return age;
     }
-    private void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
-    private float getHeight() {
+    public float getHeight() {
         return height;
     }
-    private void setHeight(float height) {
+    public void setHeight(float height) {
         this.height = height;
     }
-    private float getWeight() {
+    public float getWeight() {
         return weight;
     }
-    private void setWeight(float weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
         this.setCategory();
     }
-    private String getCategory() {
+    public String getCategory() {
         return category;
     }
-    private void setCategory() {
+    public void setCategory() {
         if (this.getWeight() < 52.2) this.category = "Invalid";
         else if (this.getWeight() <= 70.3) this.category = "Light";
         else if (this.getWeight() <= 83.9) this.category = "Medium";
-        else this.category = "Heavy";
+        else if (this.getWeight() <= 120.3) this.category = "Heavy";
+        else this.category = "Invalid";
     }
-    private int getWins() {
+    public int getWins() {
         return wins;
     }
-    private void setWins(int wins) {
+    public void setWins(int wins) {
         this.wins = wins;
     }
-    private int getLosses() {
+    public int getLosses() {
         return losses;
     }
-    private void setLosses(int losses) {
+    public void setLosses(int losses) {
         this.losses = losses;
     }
-    private int getDraws() {
+    public int getDraws() {
         return draws;
     }
-    private void setDraws(int draws) {
+    public void setDraws(int draws) {
         this.draws = draws;
     }
 
-    @Override
     public void show() {
         System.out.println(
             "- - - Showing Fighter - - -\n" +
             "This is the " + this.getNacionality() + " fighter " + this.getName() + "\n" +
-            "He has " + this.getWins() + " wins, " + this.getLosses() + " losses and " + this.getDraws() + " draws"
+            "He has " + this.getWins() + (this.getWins() <= 1 ? " win, " : " wins, ") + 
+            this.getLosses() + (this.getLosses() <= 1 ? " lose and " : " losses and ") + 
+            this.getDraws() + (this.getDraws() <= 1 ? " draw" : " draws")
         );
     }
 
-    @Override
     public void status() {
         System.out.println(
             "- - - Fighter Status - - -\n" +
@@ -101,17 +102,14 @@ public class Fighter implements FighterInterface{
         );
     }
 
-    @Override
     public void winCombat() {
         this.setWins(this.getWins() + 1);
     }
 
-    @Override
     public void loseCombat() {
         this.setLosses(this.getLosses() + 1);
     }
 
-    @Override
     public void drawCombat() {
         this.setDraws(this.getDraws() + 1);
     }
