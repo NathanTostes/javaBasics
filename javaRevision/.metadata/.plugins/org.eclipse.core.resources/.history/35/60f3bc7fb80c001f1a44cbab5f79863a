@@ -1,0 +1,21 @@
+package bankSystem;
+
+public class TestError {
+	public static void main(String[] args) {
+		try {
+			int result = 0 / 0;
+		} catch (ArithmeticException exception) {
+			System.out.println("Erro: " + exception);
+		}
+		try {
+			new java.io.FileInputStream("arq.txt");
+		} catch (java.io.FileNotFoundException e) {
+			System.out.println(e);
+		}
+		try {
+			int num = 9.9;
+		} catch (java.lang.Error e) {
+			System.out.println(e);
+		}
+	}
+}

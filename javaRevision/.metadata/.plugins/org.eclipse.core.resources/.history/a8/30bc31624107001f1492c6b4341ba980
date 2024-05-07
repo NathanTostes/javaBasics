@@ -1,8 +1,0 @@
-package bankSystem;
-
-public class Main {
-	public static void main(String[] args) {
-		 = new Manager("Nathan", "32489408349", 10000, "8008");
-		System.out.println(manager1.toString());
-	}
-}

@@ -1,0 +1,11 @@
+package bankSystem;
+
+public class TestError {
+	public static void main(String[] args) {
+		try {
+			int number = 9.9;
+		} catch (Error exception) {
+			System.out.println("Erro: " + exception);
+		}
+	}
+}

@@ -1,9 +1,0 @@
-package bankSystem;
-
-public class Employee {
-	private String name;
-	private String cpf;
-	private double salary;
-	
-	
-}

@@ -3,4 +3,9 @@
     <fullyQualifiedTypeName name="bankSystem.BonusControl"/>
     <fullyQualifiedTypeName name="bankSystem.Authenticable"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.lang.Error"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="java.lang.ClassCastException"/>
 </qualifiedTypeNameHistroy>

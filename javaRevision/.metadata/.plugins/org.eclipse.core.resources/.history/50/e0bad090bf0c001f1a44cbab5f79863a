@@ -1,0 +1,7 @@
+package bankSystem;
+
+public class InvalidValueException extends RuntimeException {
+	public InvalidValue(String message) {
+		super(message);
+	}
+}

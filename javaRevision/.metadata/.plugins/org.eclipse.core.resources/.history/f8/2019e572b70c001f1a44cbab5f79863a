@@ -1,0 +1,11 @@
+package bankSystem;
+
+public class TestError {
+	public static void main(String[] args) {
+		try {
+			int number = 0 / 0;
+		} catch (RuntimeException exception) {
+			System.out.println("Erro: " + exception);
+		}
+	}
+}

@@ -14,7 +14,7 @@ public class CurrentAccount implements Account {
 		this.cpf = cpf;
 		this.balance = 0;
 	}
-	
+
 	public double getBalance() {
 		return this.balance;
 	}
@@ -23,20 +23,20 @@ public class CurrentAccount implements Account {
 		return savingAccounts;
 	}
 
-	public void deposit(double value) {
-		if (value < 0) {
-			System.out.println("Error to deposit, invalid value");
+	public void deposit(double value) throws InvalidValueException {
+		if (value <= 0) {
+			throw new InvalidValueException("Negative or null deposit");
 		} else {
 			this.balance += value;
 			System.out.println("Sucefull Deposit");
 		}
 	}
 
-	public void withdraw(double value) {
+	public void withdraw(double value) throws InvalidValueException {
 		if (value <= 0) {
-			System.out.println("Error to withdraw, invalid value");
+			throw new InvalidValueException("Negative or null withdraw");
 		} else if (this.balance < value) {
-			System.out.println("Error to withdraw, insuficient balance");
+			throw new InvalidValueException("Insufficient balance");
 		} else {
 			this.balance -= value;
 			System.out.println("Sucefull withdraw");
