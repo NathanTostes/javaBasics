@@ -1,0 +1,19 @@
+package bankSystem;
+
+public class Director extends Enployee {
+	private String password;
+
+	@Override
+	public boolean autentification(String password) {
+		if (this.password == password) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public double getSalaryBonus() {
+		return (this.salary * 0.1) * 2000;
+	}
+}

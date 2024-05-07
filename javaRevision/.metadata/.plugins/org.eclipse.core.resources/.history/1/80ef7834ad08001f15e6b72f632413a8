@@ -1,0 +1,7 @@
+package bankSystem;
+
+public interface Account {
+	String name;
+	String cpf;
+	
+}

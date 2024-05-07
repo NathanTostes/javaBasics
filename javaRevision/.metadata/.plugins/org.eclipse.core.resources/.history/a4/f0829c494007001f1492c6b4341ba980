@@ -1,0 +1,5 @@
+package bankSystem;
+
+public interface Authenticable {
+	public boolean autentification(String password);
+}

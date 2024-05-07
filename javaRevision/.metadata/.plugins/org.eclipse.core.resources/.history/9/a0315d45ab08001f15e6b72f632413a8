@@ -1,0 +1,31 @@
+package bankSystem;
+
+public class ClientAccount {
+	private static int accountCount;
+	private String name;
+	private String cpf;
+	private double balance;
+
+	ClientAccount(String name, String cpf) {
+		ClientAccount.accountCount++;
+		this.name = name;
+		this.cpf = cpf;
+		this.balance = 0;
+	}
+
+	public int getAccountCount() {
+		return accountCount;
+	}
+	
+	public void deposit(double value) {
+		if (value > 0) {
+			
+		}
+		this.balance += 
+	}
+
+	@Override
+	public String toString() {
+		return "Account [name=" + name + ", cpf=" + cpf + ", balance=" + balance + "]";
+	}
+}

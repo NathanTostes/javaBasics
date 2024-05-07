@@ -1,0 +1,12 @@
+package bankSystem;
+
+
+public class Main {
+	public static void main (String[] args) {
+		Manager manager1 = new Manager("Nathan", "32489408349", 10000, "8008");
+		BonusControl.registerBonus(manager1);
+		Enployee enployee1 = new Enployee("Cleber", "393214823904", 2000);
+		BonusControl.registerBonus(enployee1);
+		System.out.println(BonusControl.getBonusTotal());
+	}
+}

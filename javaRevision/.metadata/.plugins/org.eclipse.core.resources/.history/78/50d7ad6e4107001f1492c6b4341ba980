@@ -1,0 +1,8 @@
+package bankSystem;
+
+public class Main {
+	public static void main(String[] args) {
+		Authenticable e1 = new Manager("Nathan", "32489408349", 10000, "8008");
+		System.out.println(e1.toString());
+	}
+}

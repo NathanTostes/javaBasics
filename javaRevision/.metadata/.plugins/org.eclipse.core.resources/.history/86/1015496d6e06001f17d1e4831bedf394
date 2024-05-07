@@ -1,0 +1,23 @@
+package bankSystem;
+
+public class Enployee {
+	protected String name;
+	protected String cpf;
+	protected double salary;
+
+	public Enployee (String name, String cpf, double salary) {
+		super();
+		this.name = name;
+		this.cpf = cpf;
+		this.salary = salary;
+	}
+	
+	public double getSalaryBonus() {
+		return salary * 0.1;
+	}
+
+	@Override
+	public String toString() {
+		return "Enployee [name=" + name + ", cpf=" + cpf + ", salary=" + salary + "]";
+	}
+}

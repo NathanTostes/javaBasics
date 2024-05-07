@@ -1,0 +1,11 @@
+package bankSystem;
+
+public interface Account {
+	String name;
+	String cpf;
+	int accountNumber;
+	double balance;
+	
+	void deposit(double value);
+	void withdraw(double value);
+}
