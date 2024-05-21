@@ -28,6 +28,6 @@ public class Manager implements EmployeeAuthenticable {
 
 	@Override
 	public String toString() {
-		return "Manager [name=" + name + ", cpf=" + cpf + ", salary=" + salary + ", password=" + password + "]";
+		return super.toString() + " password: " + this.password + "]";
 	}
 }
