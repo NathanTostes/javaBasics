@@ -14,6 +14,19 @@ public class CurrentAccount implements Account {
 		this.cpf = cpf;
 		this.balance = 0;
 	}
+	
+	CurrentAccount() {
+		CurrentAccount.savingAccounts++;
+		this.balance = 0;
+	}
+	
+	public String getOwnerName() {
+		return this.name;
+	}
+	
+	public int getAccountNumber() {
+		return this.accountNumber;
+	}
 
 	public double getBalance() {
 		return this.balance;

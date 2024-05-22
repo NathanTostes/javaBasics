@@ -1,0 +1,15 @@
+package bankSystem;
+
+public class TestArrays {
+	public static void main(String[] args) {
+		Account[] accounts = new Account[10];
+		for (int i = 0; i < accounts.length; i++) {
+			accounts[i] = new CurrentAccount();
+			try {
+				accounts[i].deposit(100 * i);
+			} catch (InvalidValueException exception) {
+				System.out.println(exception);
+			}
+		}
+	}
+}

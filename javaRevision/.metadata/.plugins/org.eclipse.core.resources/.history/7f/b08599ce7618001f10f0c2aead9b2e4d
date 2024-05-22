@@ -1,0 +1,13 @@
+package bankSystem;
+
+public class Bank {
+	private String name;
+	private int number;
+	private Account[] accounts;
+	
+	public Bank(String name, int number) {
+		this.name = name;
+		this.number = number;
+		accounts = new Account[10];
+	}
+}
