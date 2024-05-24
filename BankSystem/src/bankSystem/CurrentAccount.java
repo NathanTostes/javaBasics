@@ -1,14 +1,14 @@
 package bankSystem;
 
 public class CurrentAccount implements Account {
-	private static int savingAccounts;
+	private static int currentAccounts;
 	private String name;
 	private String cpf;
 	private int accountNumber;
 	private double balance;
 
 	CurrentAccount(String name, String cpf, int accountNumber) {
-		CurrentAccount.savingAccounts++;
+		CurrentAccount.currentAccounts++;
 		this.accountNumber = accountNumber;
 		this.name = name;
 		this.cpf = cpf;
@@ -16,7 +16,7 @@ public class CurrentAccount implements Account {
 	}
 	
 	CurrentAccount() {
-		CurrentAccount.savingAccounts++;
+		CurrentAccount.currentAccounts++;
 		this.balance = 0;
 	}
 	
@@ -32,8 +32,8 @@ public class CurrentAccount implements Account {
 		return this.balance;
 	}
 
-	public int getAccountCount() {
-		return savingAccounts;
+	public static int numberOfAccounts() {
+		return currentAccounts;
 	}
 
 	public void deposit(double value) throws InvalidValueException {
