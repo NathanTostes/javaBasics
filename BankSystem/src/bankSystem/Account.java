@@ -1,6 +1,6 @@
 package bankSystem;
 
-public interface Account {
+public interface Account extends Comparable<Account> {
 	public String getOwnerName();
 	public int getAccountNumber();
 	public double getBalance();

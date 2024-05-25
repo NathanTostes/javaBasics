@@ -58,6 +58,11 @@ public class CurrentAccount implements Account {
 
 	@Override
 	public String toString() {
-		return "Account [name=" + name + ", cpf=" + cpf + ", balance=" + balance + "]";
+		return "Account [name=" + name + ", cpf=" + cpf + ", number=" + accountNumber + ", balance=" + balance + "]";
+	}
+	
+	@Override
+	public int compareTo(Account anotherAccount) {
+		return this.getOwnerName().compareTo(anotherAccount.getOwnerName());
 	}
 }

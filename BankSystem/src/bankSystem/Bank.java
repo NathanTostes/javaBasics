@@ -3,7 +3,7 @@ package bankSystem;
 import java.util.*;
 
 public class Bank {
-	public static ArrayList<Account> accountList = new ArrayList<Account>();
+	public static ArrayList<Account> accountList = new ArrayList<>();
 
 	public static void addAccount(Account account) {
 		accountList.add(account);
@@ -20,5 +20,13 @@ public class Bank {
 	public static void showAccounts() {
 		accountList.forEach((account) -> System.out.println(account));
 		System.out.println("The bank has " + accountList.size() + " accounts");
+	}
+	
+	public static void sortAccounts() {
+		Collections.sort(accountList);
+	}
+	
+	public static void shuffleAccounts() {
+		Collections.shuffle(accountList);
 	}
 }
