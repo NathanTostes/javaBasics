@@ -12,6 +12,6 @@ public class TestSortList {
 		names.add("Nathan");
 		System.out.println(names);
 		Collections.sort(names);
-		System.out.println(names);
+		System.out.println(names);		
  	}
 }
