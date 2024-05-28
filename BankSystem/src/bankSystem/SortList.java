@@ -2,7 +2,7 @@ package bankSystem;
 
 import java.util.*;
 
-public class TestSortList {
+public class SortList {
 	public static void main(String[] args) {
 		List<String> names = new ArrayList<>();
 		names.add("Pedro");

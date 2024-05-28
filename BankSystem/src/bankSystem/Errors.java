@@ -2,7 +2,7 @@ package bankSystem;
 
 import java.io.FileNotFoundException;
 
-public class TestError {
+public class Errors {
 	public static void main(String[] args) {
 		try {
 			int result = 0 / 0;

@@ -3,10 +3,12 @@ package bankSystem;
 import java.util.*;
 
 public class Bank {
-	public static ArrayList<Account> accountList = new ArrayList<>();
+	private static Set<Account> accountList = new HashSet<>();
+	public static Map<String, Account> ownerList = new HashMap<>();
 
 	public static void addAccount(Account account) {
 		accountList.add(account);
+		ownerList.put(account.getOwnerName(), account);
 	}
 	
 	public static void removeAccount(Account account) {
@@ -21,12 +23,8 @@ public class Bank {
 		accountList.forEach((account) -> System.out.println(account));
 		System.out.println("The bank has " + accountList.size() + " accounts");
 	}
-	
-	public static void sortAccounts() {
-		Collections.sort(accountList);
-	}
-	
-	public static void shuffleAccounts() {
-		Collections.shuffle(accountList);
+
+	public static Account searchAccountByOwner(String ownerName) {
+		return ownerList.get(ownerName);
 	}
 }

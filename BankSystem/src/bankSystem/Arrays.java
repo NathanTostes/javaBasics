@@ -1,6 +1,6 @@
 package bankSystem;
 
-public class TestArrays {
+public class Arrays {
 	public static void main(String[] args) {
 		Account[] accounts = new Account[10];
 		for (int i = 0; i < accounts.length; i++) {
