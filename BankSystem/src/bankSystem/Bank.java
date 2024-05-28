@@ -2,7 +2,7 @@ package bankSystem;
 
 import java.util.*;
 
-public class Bank {
+public abstract class Bank {
 	private static Set<Account> accountList = new HashSet<>();
 	public static Map<String, Account> ownerList = new HashMap<>();
 
