@@ -10,16 +10,15 @@ public class CurrentAccount implements Account {
 	private int agencyNumber;
 	private double balance;
 
-	CurrentAccount(String name, String cpf) {
-		Random numberGenerator = new Random();
+	CurrentAccount(String name, String cpf, int accountNumber, int agencyNumber, double balance) {
 		CurrentAccount.currentAccounts++;
 		this.name = name;
 		this.cpf = cpf;
-		this.accountNumber = numberGenerator.nextInt(10000);
-		this.agencyNumber = numberGenerator.nextInt(10000);
-		this.balance = 0;
+		this.accountNumber = accountNumber;
+		this.agencyNumber = agencyNumber;
+		this.balance = balance;
 	}
-
+	
 	CurrentAccount(String name, String cpf, int accountNumber, int agencyNumber) {
 		CurrentAccount.currentAccounts++;
 		this.name = name;
@@ -37,9 +36,17 @@ public class CurrentAccount implements Account {
 	public String getOwnerName() {
 		return this.name;
 	}
+	
+	public String getOwnerCpf() {
+		return this.cpf;
+	}
 
 	public int getAccountNumber() {
 		return this.accountNumber;
+	}
+	
+	public int getAgencyNumber() {
+		return this.agencyNumber;
 	}
 
 	public double getBalance() {
@@ -72,7 +79,7 @@ public class CurrentAccount implements Account {
 
 	@Override
 	public String toString() {
-		return "Account [name=" + name + ", cpf=" + cpf + ", number=" + accountNumber + ", balance=" + balance + "]";
+		return "Account [name=" + name + ", cpf=" + cpf + ", accountNumber=" + accountNumber + ", agencyNumber=" + agencyNumber + ", balance=" + balance + "]";
 	}
 
 	@Override
