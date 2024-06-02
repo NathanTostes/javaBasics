@@ -18,4 +18,9 @@ public class ListIterator implements Runnable {
 		}
 		System.out.println("Total time of iteration: " + (System.currentTimeMillis() - startTimer) + "ms");
 	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("ListIterator finalizing");
+	}
 }

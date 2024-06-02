@@ -38,5 +38,11 @@ public class Main {
 		Thread t2 = new Thread(new PrintNumbers(2));
 		t2.setPriority(Thread.MIN_PRIORITY);
 		t2.start();
+		try {
+			Thread.sleep(15);
+			System.gc();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

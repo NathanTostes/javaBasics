@@ -13,4 +13,9 @@ public class ListAdder implements Runnable {
 		}
 		System.out.println("Total time of addition: " + (System.currentTimeMillis() - startTimer) + "ms");
 	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("ListAdder finalizing");
+	}
 }

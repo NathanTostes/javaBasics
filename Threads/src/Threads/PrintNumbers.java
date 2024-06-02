@@ -13,4 +13,9 @@ public class PrintNumbers implements Runnable {
 			System.out.println("Thread (" + threadId + ") print: " + i);
 		}
 	}
+	
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("PrintNumbers ID " + threadId + " finalizing");
+	}
 }
