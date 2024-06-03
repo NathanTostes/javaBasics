@@ -24,11 +24,12 @@ public class Main {
 			numberList.add(i);
 		}
 		Thread listIterator = new Thread(new ListIterator(numberList));
-		listIterator.start();
 		Thread listAdder = new Thread(new ListAdder());
+		listIterator.start();
 		listAdder.start();
 		try {
-			Thread.sleep(3000);
+			listIterator.join();
+			listAdder.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
