@@ -1,0 +1,3 @@
+I love Java!
+This is the better programming language!
+I really like rust too!
