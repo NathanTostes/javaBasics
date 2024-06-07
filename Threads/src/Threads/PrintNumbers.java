@@ -8,7 +8,7 @@ public class PrintNumbers implements Runnable {
 	}
 
 	@Override
-	public synchronized void run() {
+	public void run() {
 		for(int i = 1; i <= 100; i++) {
 			System.out.println("Thread (" + threadId + ") print: " + i);
 		}
