@@ -16,9 +16,11 @@ public class HelloWorldThread implements Runnable {
 		for (Integer integer : collection) {
 			collection.contains(integer);
 		}
-		long finishTime = Instant.now().toEpochMilli();
-		String totalTime = (finishTime - startTime) / 1000 + "."
-				+ ((finishTime - startTime) - (((finishTime - startTime) / 1000) * 1000));
-		System.out.println("Thread " + threadName + " has finished in " + totalTime);
+		synchronized (this) {
+			long finishTime = Instant.now().toEpochMilli();
+			String totalTime = (finishTime - startTime) / 1000 + "."
+					+ ((finishTime - startTime) - (((finishTime - startTime) / 1000) * 1000));
+			System.out.println("Thread " + threadName + " has finished in " + totalTime);
+		}
 	}
 }
