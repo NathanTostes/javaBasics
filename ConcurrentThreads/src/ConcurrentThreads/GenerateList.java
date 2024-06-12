@@ -13,7 +13,8 @@ public class GenerateList implements Runnable {
 	
 	@Override
 	public void run() {
-		System.out.println("Starting generation...");
+		String threadName = getThreadName();
+		System.out.println("Starting generation of " + threadName + "...");
 		long startTime = Instant.now().toEpochMilli();
 		for(int i = 0; i < 50000; i++) {
 			list.add("Element " + i);
@@ -23,6 +24,10 @@ public class GenerateList implements Runnable {
 		}
 		long processTimeSeconds = (Instant.now().toEpochMilli() - startTime) / 1000;
 		long processTimeMiliseconds = Instant.now().toEpochMilli() - startTime - (processTimeSeconds * 1000);
-		System.out.println("Generation finished in " + processTimeSeconds + "." + processTimeMiliseconds);
+		System.out.println("Generation of " + threadName +" finished in " + processTimeSeconds + "." + processTimeMiliseconds);
+	}
+	
+	private String getThreadName() {
+		return Thread.currentThread().getName();
 	}
 }
