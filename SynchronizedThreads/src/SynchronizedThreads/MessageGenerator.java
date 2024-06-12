@@ -15,8 +15,10 @@ public class MessageGenerator implements Runnable {
 
 	@Override
 	public void run() {
-		for (int i = start; i < end; i++) {
-			messageList.add("Message " + i);
+		synchronized(MessageGenerator.class) {
+			for (int i = start; i < end; i++) {
+				messageList.add("Message " + i);
+			}
 		}
 	}
 }

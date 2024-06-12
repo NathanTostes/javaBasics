@@ -1,12 +1,13 @@
 package SynchronizedThreads;
 
 import java.util.*;
+import java.util.concurrent.Executor;
 
 public class Main {
 	private static int notFoundMessages = 0;
 	
 	public static void main(String[] args) {
-		Collection<String> messageList = new Vector<>();
+		Collection<String> messageList = new HashSet<>();
 		Thread t1 = new Thread(new MessageGenerator(0, 10000, messageList));
 		Thread t2 = new Thread(new MessageGenerator(10000, 20000, messageList));
 		Thread t3 = new Thread(new MessageGenerator(20000, 30000, messageList));
@@ -22,13 +23,7 @@ public class Main {
 		}
 		for(int i = 0; i < 30000; i++) {
 			if(!messageList.contains("Message " + i)) {
-				System.out.println("Message not found");
 				notFoundMessages++;
-			}
-		}
-		for(String message : messageList) {
-			if(message == null) {
-				System.out.println("Message is null");
 			}
 		}
 		System.out.println(notFoundMessages + " messages not found");
