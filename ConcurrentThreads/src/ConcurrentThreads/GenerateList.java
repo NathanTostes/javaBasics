@@ -1,10 +1,10 @@
 package ConcurrentThreads;
 
 import java.time.Instant;
-import java.time.LocalTime;
 import java.util.Collection;
+import java.util.concurrent.Callable;
 
-public class GenerateList implements Runnable {
+public class GenerateList implements Callable<Collection> {
 	private Collection<String> list;
 	
 	public GenerateList(Collection<String> list) {
@@ -12,7 +12,7 @@ public class GenerateList implements Runnable {
 	}
 	
 	@Override
-	public void run() {
+	public Collection call() {
 		String threadName = getThreadName();
 		System.out.println("Starting generation of " + threadName + "...");
 		long startTime = Instant.now().toEpochMilli();
@@ -25,6 +25,7 @@ public class GenerateList implements Runnable {
 		long processTimeSeconds = (Instant.now().toEpochMilli() - startTime) / 1000;
 		long processTimeMiliseconds = Instant.now().toEpochMilli() - startTime - (processTimeSeconds * 1000);
 		System.out.println("Generation of " + threadName +" finished in " + processTimeSeconds + "." + processTimeMiliseconds);
+		return list;
 	}
 	
 	private String getThreadName() {
