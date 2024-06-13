@@ -3,7 +3,8 @@ package multithreading;
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Main {
+
+public class CyclicBarriers {
 	private static long total = 0;
 	private static LinkedBlockingQueue<Long> list = new LinkedBlockingQueue<>();
 	private static ExecutorService executor = Executors.newFixedThreadPool(3);
