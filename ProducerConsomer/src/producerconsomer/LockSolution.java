@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
 
-public class Main {
+public class LockSolution {
 	private static BlockingQueue<String> queue = new LinkedBlockingQueue<>();
 	private static ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 
