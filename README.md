@@ -3,7 +3,7 @@
 ### What I learn here?
 - Basics in Java (operators, conditional, loops)
 - Primitive types
-- Data Structures (Strings, Arrays, Lists)
+- Strings, Arrays and Lists
 - OOP (Object-oriented programming)
 - I/O (Input/Output)
 - Sockets
@@ -13,3 +13,4 @@
 - Streams
 - Generics
 - Threads
+- Some Algorithms and Data Structures
