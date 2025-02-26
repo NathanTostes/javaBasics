@@ -1,4 +1,4 @@
-# Java Basics Studies
+# Java Studies
 
 ### What I learn here?
 - Basics in Java (operators, conditional, loops)
